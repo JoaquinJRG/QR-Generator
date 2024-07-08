@@ -10,7 +10,7 @@ export function QrBox() {
   const { color } = useContext(ColorContext)
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/qr64?url=${encodeURIComponent(inputValue)}&color=${encodeURIComponent(color)}`)
+    fetch(`https://qr-generator-server.vercel.app/qr64?url=${encodeURIComponent(inputValue)}&color=${encodeURIComponent(color)}`)
       .then(res => res.json())
       .then(data => setBase64(data.qrBase64))
   }, [inputValue, color])
