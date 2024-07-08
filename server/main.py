@@ -45,7 +45,7 @@ async def qr64(url: str = "http://example.com", color: str = "black"):
 
     #Guardo la imagen en el buffer y lo devuelvo en base 64
     buffer = BytesIO()
-    img.save(buffer, format="PNG")
+    img.save(buffer)
     img_bin = buffer.getvalue()
     return {"qrBase64": base64.b64encode(img_bin)}
   
