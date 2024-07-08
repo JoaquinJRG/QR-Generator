@@ -5,7 +5,8 @@ import qrcode
 from io import BytesIO
 
 origins = [
-  "http://localhost:5173"
+  "http://localhost:5173",
+  "https://qr-generator-nine-zeta.vercel.app"
 ]
 
 app = FastAPI()
