@@ -21,10 +21,10 @@ export function QrBox() {
 
 
   return (
-    <div className="bg-white border border-black px-5 py-10 w-full lg:w-[45%]">
-      <div className="flex items-center justify-center mb-5">
+    <div className="bg-white border border-black px-5 py-10 w-full h-full lg:w-[45%]">
+      <div className="flex items-center justify-center mb-5 h-64 w-64 mx-auto">
         {
-          loading ? (<Spinner />) : (<img src={`data:img/png;base64, ${base64}`} alt={`Qr de ${inputValue}`} />)
+          loading ? (<Spinner />) : (<img src={`data:img/png;base64, ${base64}`} alt={`Qr de ${inputValue}`} className="max-w-full max-h-full" />)
         }
 
       </div>
